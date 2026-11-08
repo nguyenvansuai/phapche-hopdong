@@ -1,0 +1,88 @@
+{
+  "name": "phapche-hopdong",
+  "description": "Plugin Pháp chế – Hợp đồng cho doanh nghiệp Việt Nam 2026: soạn hợp đồng theo loại, rà soát rủi ro theo bên, so sánh phiên bản, đàm phán, quản lý mốc hợp đồng, thu hồi công nợ, khởi kiện – trọng tài – thi hành án, thủ tục doanh nghiệp và chủ sở hữu hưởng lợi, họp ĐHĐCĐ/HĐTV/HĐQT, bảo vệ dữ liệu cá nhân, sở hữu trí tuệ, cập nhật văn bản pháp luật mới. Kèm MCP server công cụ: lãi chậm trả, trần phạt 8%, thời hiệu, án phí, tỷ lệ biểu quyết, so sánh văn bản, quét điều khoản, sổ hợp đồng.",
+  "owner": {
+    "name": "nguyenvansuai",
+    "url": "https://github.com/nguyenvansuai"
+  },
+  "plugins": [
+    {
+      "name": "phapche-hopdong",
+      "source": "./",
+      "description": "TRỌN BỘ plugin: Plugin Pháp chế – Hợp đồng cho doanh nghiệp Việt Nam 2026: soạn hợp đồng theo loại, rà soát rủi ro theo bên, so sánh phiên bản, đàm phán, quản lý mốc hợp đồng, thu hồi công nợ, khởi kiện – trọng tài – thi hành án, thủ tục doanh nghiệp và chủ sở hữu hưởng lợi, họp ĐHĐCĐ/HĐTV/HĐQT, bảo vệ dữ liệu cá nhân, sở hữu trí tuệ, cập nhật văn bản pháp luật mới. Kèm MCP server công cụ: lãi chậm trả, trần phạt 8%, thời hiệu, án phí, tỷ lệ biểu quyết, so sánh văn bản, quét điều khoản, sổ hợp đồng.",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "bao-ve-du-lieu-ca-nhan",
+      "source": "./skills/bao-ve-du-lieu-ca-nhan",
+      "description": "Tuân thủ bảo vệ dữ liệu cá nhân cho doanh nghiệp Việt Nam theo Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15 và Nghị định 356/2025/NĐ-CP (hiệu lực 01/01/2026, thay Nghị định 13/2023) — lập bản đồ dữ liệu (khách hàng, nhân viên, ứng viên, camera, website, app), xác định căn cứ xử lý và dữ liệu nhạy cảm, soạn chính sách quyền riêng tư/thông báo xử lý dữ liệu, mẫu xin đồng ý tách theo mục đích, quy trình xử lý yêu cầu của chủ thể (truy cập, chỉnh sửa, xóa, rút đồng ý), điều khoản xử lý dữ liệu trong hợp đồng với nhà cung cấp, hồ sơ đánh giá tác động xử lý và chuyển dữ liệu ra nước ngoài, quy trình ứng phó sự cố lộ lọt, phân công nhân sự bảo vệ dữ liệu, kế hoạch tuân thủ theo quy mô doanh nghiệp. Dùng khi người dùng nói \"tuân thủ luật bảo vệ dữ liệu cá nhân\", \"chính sách quyền riêng tư\", \"form xin đồng ý\", \"khách yêu cầu xóa dữ liệu\", \"bị lộ dữ liệu khách hàng\", \"đánh giá tác động xử lý dữ liệu\", \"chuyển dữ liệu ra nước ngoài\", \"lắp camera văn phòng\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "cap-nhat-phap-luat",
+      "source": "./skills/cap-nhat-phap-luat",
+      "description": "Đọc và phân tích văn bản pháp luật mới (luật, nghị định, thông tư, nghị quyết, công văn hướng dẫn) để biết doanh nghiệp Việt Nam phải làm gì — xác định số hiệu, cơ quan ban hành, ngày hiệu lực, văn bản bị thay thế, đối tượng áp dụng, công ty có thuộc diện không, điểm mới so với quy định cũ, nghĩa vụ và thời hạn, chế tài, quy định chuyển tiếp; lập bảng tác động theo phòng ban, kế hoạch tuân thủ có người phụ trách và hạn, lịch nhắc (.ics), bản tin pháp luật nội bộ ngắn gửi ban giám đốc; kiểm tra một văn bản còn hiệu lực không qua nguồn chính thức. Dùng khi người dùng nói \"luật mới này ảnh hưởng gì đến công ty\", \"tóm tắt nghị định mới\", \"từ ngày ... có gì thay đổi\", \"văn bản này còn hiệu lực không\", \"làm bản tin pháp luật tháng\", \"kế hoạch tuân thủ luật mới\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "dam-phan-hop-dong",
+      "source": "./skills/dam-phan-hop-dong",
+      "description": "Chuẩn bị và hỗ trợ đàm phán hợp đồng thương mại cho doanh nghiệp Việt Nam — xác định mục tiêu, điểm không nhượng bộ, phương án thay thế tốt nhất (BATNA), bảng điều khoản ưu tiên với vị trí mở đầu – mục tiêu – điểm dừng, gói trao đổi nhượng bộ (đổi điều này lấy điều kia), lập luận pháp lý và thương mại cho từng điểm, dự đoán phản bác của đối tác, kịch bản cuộc họp đàm phán, email/thư phản hồi đề xuất sửa đổi lịch sự mà chắc chắn, biên bản ghi nhận kết quả đàm phán. Dùng khi người dùng nói \"chuẩn bị đàm phán hợp đồng\", \"đối tác không chịu sửa điều khoản phạt\", \"viết email phản hồi góp ý hợp đồng\", \"nên nhượng bộ điều gì\", \"kịch bản đàm phán\", \"làm sao thuyết phục đối tác bỏ điều khoản này\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "hop-hoi-dong-quan-tri",
+      "source": "./skills/hop-hoi-dong-quan-tri",
+      "description": "Tổ chức họp và lập văn bản của cơ quan quản trị doanh nghiệp theo Luật Doanh nghiệp 2020 sửa đổi 2025 — Đại hội đồng cổ đông thường niên/bất thường, Hội đồng thành viên, Hội đồng quản trị, quyết định của chủ sở hữu công ty TNHH một thành viên; lịch chuẩn bị (thường niên trong 4 tháng sau năm tài chính, mời họp ĐHĐCĐ trước 21 ngày, HĐTV 07 ngày, HĐQT 03 ngày làm việc), danh sách cổ đông có quyền dự họp, chương trình, quy chế họp, phiếu biểu quyết, kiểm tra điều kiện tiến hành họp và tỷ lệ thông qua (lần 1/2/3, vấn đề thường/đặc biệt), lấy ý kiến bằng văn bản, biên bản kiểm phiếu, biên bản họp, nghị quyết; giao dịch với người có liên quan cần chấp thuận. Dùng khi người dùng nói \"tổ chức đại hội cổ đông\", \"họp hội đồng thành viên\", \"biên bản họp HĐQT\", \"nghị quyết ĐHĐCĐ\", \"tỷ lệ biểu quyết bao nhiêu thì thông qua\", \"lấy ý kiến cổ đông bằng văn bản\", \"quyết định của chủ sở hữu\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "quan-ly-hop-dong",
+      "source": "./skills/quan-ly-hop-dong",
+      "description": "Quản lý vòng đời hợp đồng sau khi ký cho doanh nghiệp Việt Nam — ghi sổ theo dõi hợp đồng (số, đối tác, giá trị, ngày hiệu lực – hết hạn, tự động gia hạn, mốc thanh toán, người phụ trách, nơi lưu bản gốc), nhắc mốc sắp đến và hạn cuối thông báo không gia hạn, xuất lịch .ics, theo dõi nghĩa vụ hai bên, soạn phụ lục sửa đổi – gia hạn, thông báo chấm dứt/không gia hạn, biên bản nghiệm thu, biên bản đối chiếu công nợ định kỳ (giữ thời hiệu), biên bản thanh lý; báo cáo danh mục hợp đồng theo đối tác, giá trị, tình trạng. Dùng khi người dùng nói \"theo dõi hợp đồng\", \"hợp đồng nào sắp hết hạn\", \"lập sổ hợp đồng\", \"nhắc hạn gia hạn\", \"làm phụ lục gia hạn\", \"thanh lý hợp đồng\", \"đối chiếu công nợ với đối tác\", \"danh sách hợp đồng đang thực hiện\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "ra-soat-hop-dong",
+      "source": "./skills/ra-soat-hop-dong",
+      "description": "Rà soát hợp đồng do đối tác gửi hoặc hợp đồng sắp ký để tìm rủi ro cho đúng bên của người dùng — chạy công cụ quét điều khoản (thiếu điều khoản, vừa Tòa án vừa Trọng tài, phạt vượt 8%, giá ngoại tệ, tự động gia hạn, miễn trừ trách nhiệm tuyệt đối, viện dẫn luật cũ, địa chỉ quận/huyện, số tiền bằng chữ sai), đọc kỹ theo checklist 10 nhóm, xếp rủi ro 3 mức, đề xuất câu chữ sửa thay thế (redline), câu hỏi cần làm rõ với đối tác, kết luận nên ký / ký sau khi sửa / không ký. Dùng khi người dùng nói \"rà hợp đồng này\", \"hợp đồng đối tác gửi có rủi ro gì\", \"có nên ký không\", \"kiểm tra hợp đồng trước khi ký\", \"điều khoản nào bất lợi cho tôi\", \"sửa giúp các điều khoản bất lợi\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "so-huu-tri-tue",
+      "source": "./skills/so-huu-tri-tue",
+      "description": "Bảo vệ tài sản trí tuệ cho doanh nghiệp, hộ kinh doanh Việt Nam — tra cứu nhãn hiệu trước khi dùng/đăng ký (IP Lib của Cục Sở hữu trí tuệ, WIPO Global Brand Database), đánh giá khả năng đăng ký và nguy cơ trùng/tương tự, phân nhóm sản phẩm dịch vụ theo Bảng phân loại Nice, chuẩn bị hồ sơ đơn đăng ký nhãn hiệu, theo dõi tiến trình và gia hạn 10 năm; quyền tác giả (logo, phần mềm, nội dung – phát sinh tự động, đăng ký để làm chứng cứ); bí mật kinh doanh; hợp đồng chuyển nhượng/li-xăng nhãn hiệu, hợp đồng thuê thiết kế có điều khoản chuyển giao quyền; xử lý xâm phạm (thư cảnh báo, yêu cầu sàn thương mại điện tử gỡ, xử phạt hành chính, khởi kiện). Dùng khi người dùng nói \"đăng ký nhãn hiệu\", \"bảo hộ thương hiệu\", \"tra cứu nhãn hiệu có bị trùng không\", \"logo thuê thiết kế thuộc về ai\", \"bị làm nhái sản phẩm\", \"shop khác dùng tên thương hiệu của tôi\", \"đăng ký bản quyền phần mềm\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "so-sanh-phien-ban",
+      "source": "./skills/so-sanh-phien-ban",
+      "description": "So sánh hai phiên bản hợp đồng hoặc văn bản (bản mình gửi và bản đối tác sửa lại, bản nháp cũ và mới, hợp đồng năm trước và năm nay, điều khoản giao dịch chung cũ và mới) bằng công cụ so sánh theo đoạn trên file Word/PDF/văn bản dán vào — liệt kê mọi chỗ sửa, thêm, xóa theo từng Điều, đánh dấu thay đổi nhạy cảm (số tiền, tỷ lệ, thời hạn, chữ \"không\", phạt, chấm dứt, thanh toán, cơ quan giải quyết tranh chấp, giới hạn trách nhiệm), phát hiện sửa \"lén\" không báo, đánh giá thay đổi có lợi hay bất lợi cho bên người dùng. Dùng khi người dùng nói \"so sánh 2 bản hợp đồng\", \"đối tác sửa những gì\", \"bản mới khác bản cũ chỗ nào\", \"kiểm tra họ có sửa thêm gì không\", \"đối chiếu phiên bản\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "soan-hop-dong",
+      "source": "./skills/soan-hop-dong",
+      "description": "Soạn hợp đồng cho doanh nghiệp Việt Nam theo đúng loại và đứng về phía người dùng — mua bán hàng hóa, cung cấp dịch vụ, thuê văn phòng/mặt bằng/kho, đại lý – phân phối, gia công, vận chuyển, hợp tác kinh doanh (BCC), bảo mật (NDA), dịch vụ với cá nhân/cộng tác viên, phụ lục và biên bản thanh lý; chọn đúng luật áp dụng (Bộ luật Dân sự, Luật Thương mại), điều khoản thanh toán chống lừa đổi tài khoản, phạt ≤ 8%, bất khả kháng, tranh chấp (Tòa án hoặc Trọng tài – chọn một), địa chỉ theo địa giới mới, số tiền bằng chữ; xuất bản Word. Dùng khi người dùng nói \"soạn hợp đồng\", \"làm hợp đồng mua bán\", \"hợp đồng dịch vụ\", \"hợp đồng thuê mặt bằng\", \"hợp đồng đại lý\", \"hợp đồng nguyên tắc\", \"NDA\", \"hợp đồng hợp tác kinh doanh\", \"phụ lục hợp đồng\", \"biên bản thanh lý\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "thu-hoi-cong-no",
+      "source": "./skills/thu-hoi-cong-no",
+      "description": "Thu hồi công nợ khách hàng doanh nghiệp đúng luật theo từng nấc — đánh giá hồ sơ chứng cứ (hợp đồng, hóa đơn, biên bản giao nhận, đối chiếu công nợ), tính thời hiệu còn lại (thương mại 2 năm, dân sự 3 năm) và cách làm thời hiệu bắt đầu lại, tính lãi chậm trả, soạn tin nhắc nợ thân thiện, công văn đề nghị thanh toán, biên bản đối chiếu và cam kết trả nợ theo lộ trình, thông báo trước khi khởi kiện, so sánh phương án hòa giải – trọng tài – khởi kiện (ước tính án phí, thời gian) – yêu cầu mở thủ tục phá sản; cảnh báo cách đòi nợ trái luật (dịch vụ đòi nợ thuê bị cấm, bêu riếu trên mạng). Dùng khi người dùng nói \"khách nợ lâu không trả\", \"đòi nợ\", \"nhắc công nợ\", \"viết thư đòi nợ\", \"khách hàng chây ì\", \"có nên kiện không\", \"nợ quá hạn 6 tháng\", \"tính lãi chậm thanh toán\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "thu-tuc-doanh-nghiep",
+      "source": "./skills/thu-tuc-doanh-nghiep",
+      "description": "Hướng dẫn và chuẩn bị hồ sơ thủ tục doanh nghiệp theo Luật Doanh nghiệp 2020 sửa đổi 2025 và Nghị định 168/2025 — thay đổi người đại diện theo pháp luật, địa chỉ trụ sở (kể cả cập nhật theo địa giới hành chính mới), ngành nghề, vốn điều lệ (tăng, giảm, góp vốn đúng hạn 90 ngày), thành viên/cổ đông, chuyển nhượng vốn – cổ phần, kê khai thông tin chủ sở hữu hưởng lợi, lập chi nhánh – văn phòng đại diện – địa điểm kinh doanh, tạm ngừng kinh doanh, giải thể; nộp trực tuyến trên Cổng thông tin quốc gia về đăng ký doanh nghiệp, thời hạn 10 ngày, việc phải làm tiếp với thuế, ngân hàng, hóa đơn, con dấu. Dùng khi người dùng nói \"đổi người đại diện\", \"chuyển trụ sở công ty\", \"tăng vốn điều lệ\", \"chuyển nhượng cổ phần\", \"chủ sở hữu hưởng lợi là gì\", \"mở chi nhánh\", \"tạm ngừng kinh doanh\", \"giải thể công ty\", \"thay đổi đăng ký kinh doanh\".",
+      "category": "phap-che-hop-dong"
+    },
+    {
+      "name": "tranh-chap-to-tung",
+      "source": "./skills/tranh-chap-to-tung",
+      "description": "Chuẩn bị giải quyết tranh chấp kinh doanh, thương mại, dân sự cho doanh nghiệp Việt Nam — chọn con đường (thương lượng, hòa giải thương mại, hòa giải đối thoại tại Tòa án, trọng tài thương mại – VIAC, khởi kiện), xác định cơ quan có thẩm quyền sau cải cách tòa án 01/7/2025 (Tòa án nhân dân khu vực sơ thẩm, Tòa Kinh tế cấp tỉnh phúc thẩm), kiểm tra thỏa thuận trọng tài có hiệu lực không, thời hiệu, ước tính án phí và tạm ứng án phí, soạn đơn khởi kiện (mẫu 23-DS), danh mục chứng cứ, bản tự khai, đơn yêu cầu áp dụng biện pháp khẩn cấp tạm thời, thủ tục rút gọn; sau bản án: kháng cáo (15 ngày), yêu cầu thi hành án (5 năm). Dùng khi người dùng nói \"khởi kiện\", \"nộp đơn kiện ra tòa\", \"kiện ở tòa nào\", \"đơn khởi kiện\", \"trọng tài hay tòa án\", \"án phí bao nhiêu\", \"bị kiện thì làm gì\", \"kháng cáo\", \"thi hành án\".",
+      "category": "phap-che-hop-dong"
+    }
+  ]
+}

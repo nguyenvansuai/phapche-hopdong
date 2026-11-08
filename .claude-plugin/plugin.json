@@ -1,0 +1,10 @@
+{
+  "name": "phapche-hopdong",
+  "version": "1.0.0",
+  "description": "Plugin Pháp chế – Hợp đồng cho doanh nghiệp Việt Nam 2026: soạn hợp đồng theo loại, rà soát rủi ro theo bên, so sánh phiên bản, đàm phán, quản lý mốc hợp đồng, thu hồi công nợ, khởi kiện – trọng tài – thi hành án, thủ tục doanh nghiệp và chủ sở hữu hưởng lợi, họp ĐHĐCĐ/HĐTV/HĐQT, bảo vệ dữ liệu cá nhân, sở hữu trí tuệ, cập nhật văn bản pháp luật mới. Kèm MCP server công cụ: lãi chậm trả, trần phạt 8%, thời hiệu, án phí, tỷ lệ biểu quyết, so sánh văn bản, quét điều khoản, sổ hợp đồng.",
+  "author": {"name": "nguyenvansuai", "url": "https://github.com/nguyenvansuai"},
+  "homepage": "https://github.com/nguyenvansuai/phapche-hopdong",
+  "repository": "https://github.com/nguyenvansuai/phapche-hopdong",
+  "license": "MIT",
+  "keywords": ["phap-che", "hop-dong", "legal", "viet-nam", "bo-luat-dan-su", "luat-thuong-mai", "doanh-nghiep", "du-lieu-ca-nhan"]
+}

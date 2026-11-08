@@ -1,0 +1,8 @@
+{
+  "danh_muc": "phap-che-hop-dong",
+  "shared_cho_tat_ca": ["nguyen-tac-chung.md", "quy-dinh-phap-ly-2026.md"],
+  "shared_theo_skill": {
+    "playbook-dieu-khoan.md": ["soan-hop-dong", "ra-soat-hop-dong", "dam-phan-hop-dong", "so-sanh-phien-ban", "quan-ly-hop-dong"]
+  },
+  "skill_dung_cong_cu": ["soan-hop-dong", "ra-soat-hop-dong", "so-sanh-phien-ban", "dam-phan-hop-dong", "quan-ly-hop-dong", "thu-hoi-cong-no", "tranh-chap-to-tung", "thu-tuc-doanh-nghiep", "hop-hoi-dong-quan-tri", "bao-ve-du-lieu-ca-nhan", "so-huu-tri-tue", "cap-nhat-phap-luat"]
+}
