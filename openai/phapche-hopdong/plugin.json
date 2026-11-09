@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "phapche-hopdong",
+  "version": "1.0.0",
+  "description": "Soạn, rà soát, đàm phán hợp đồng; đòi nợ, tố tụng, thủ tục doanh nghiệp, dữ liệu cá nhân.",
+  "author": {
+    "name": "nguyenvansuai",
+    "url": "https://github.com/nguyenvansuai"
+  },
+  "homepage": "https://github.com/nguyenvansuai/phapche-hopdong",
+  "repository": "https://github.com/nguyenvansuai/phapche-hopdong",
+  "license": "MIT",
+  "keywords": [
+    "phap-che",
+    "hop-dong",
+    "viet-nam"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Pháp chế – Hợp đồng VN",
+        "shortDescription": "Soạn, rà soát, đàm phán hợp đồng; đòi nợ, tố tụng, thủ tục doanh nghiệp, dữ liệu cá nhân.",
+        "longDescription": "12 skill pháp chế cho doanh nghiệp Việt Nam 2026: soạn hợp đồng theo loại, rà soát rủi ro theo bên, so sánh phiên bản, đàm phán, quản lý mốc hợp đồng, thu hồi công nợ, khởi kiện – trọng tài – thi hành án (Tòa án nhân dân khu vực từ 01/7/2025), thủ tục doanh nghiệp và chủ sở hữu hưởng lợi, họp ĐHĐCĐ/HĐTV/HĐQT, bảo vệ dữ liệu cá nhân (Luật 91/2025, NĐ 356/2025), sở hữu trí tuệ, cập nhật pháp luật. Kèm quy trình trọn gói, vai luật sư bên đối phương, thẩm định độc lập và công cụ tính lãi, phạt, thời hiệu, án phí, tỷ lệ biểu quyết.",
+        "developerName": "nguyenvansuai",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/nguyenvansuai/phapche-hopdong",
+        "defaultPrompt": [
+          "Rà hợp đồng phân phối này, tôi là nhà phân phối. Có nên ký không?",
+          "Khách nợ 850 triệu từ 15/3/2025, lập phương án đòi nợ, tính lãi và án phí nếu kiện.",
+          "So sánh hai phiên bản hợp đồng và chỉ ra đối tác đã sửa gì."
+        ],
+        "brandColor": "#7A1F1F",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

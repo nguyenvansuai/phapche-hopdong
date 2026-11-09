@@ -160,6 +160,9 @@ if __name__ == "__main__":
     loi = kiem_tra()
     dong_goi()
     print(f"Đã build {len(ds_skill())} skill cho plugin {PLUGIN['name']}.")
+    if (GOC / "scripts" / "build_openai.py").exists():  # sinh luôn gói ChatGPT/Codex từ skill vừa build
+        import subprocess
+        subprocess.run(["python3", str(GOC / "scripts" / "build_openai.py")], check=True)
     for c in cb:
         print("  ! " + c)
     if loi:

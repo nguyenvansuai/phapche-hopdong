@@ -1,0 +1,20 @@
+{
+  "name": "phapche-hopdong",
+  "interface": {
+    "displayName": "Pháp chế – Hợp đồng VN"
+  },
+  "plugins": [
+    {
+      "name": "phapche-hopdong",
+      "source": {
+        "source": "local",
+        "path": "./openai/phapche-hopdong"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

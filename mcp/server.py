@@ -15,11 +15,13 @@ sys.path.insert(0, GOC)
 import tools  # noqa: E402
 
 def _ten_plugin():
-    try:
-        with open(os.path.join(GOC, ".claude-plugin", "plugin.json"), encoding="utf-8") as f:
-            return json.load(f)["name"] + "-cong-cu"
-    except (OSError, ValueError, KeyError):
-        return "plugin-cong-cu"
+    for duong_dan in (os.path.join(GOC, ".claude-plugin", "plugin.json"), os.path.join(GOC, "plugin.json")):
+        try:  # bản Claude dùng .claude-plugin/plugin.json, bản ChatGPT/Codex dùng plugin.json ở gốc
+            with open(duong_dan, encoding="utf-8") as f:
+                return json.load(f)["name"] + "-cong-cu"
+        except (OSError, ValueError, KeyError):
+            continue
+    return "plugin-cong-cu"
 
 
 TEN = os.environ.get("PLUGIN_MCP_NAME") or _ten_plugin()
