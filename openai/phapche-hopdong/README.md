@@ -42,4 +42,6 @@ Chuyển từ lệnh/agent của bản Claude:
 
 Xem README ở gốc repo, mục **ChatGPT / Codex**.
 
-Gói có MCP server chạy cục bộ (Python 3.8+) → chỉ dùng được trên **ChatGPT desktop / Codex**. Skill vẫn tự tính bằng `scripts/cong_cu.py` khi không có MCP.
+## Connector khai báo sẵn (`.app.json`)
+
+Khi cài plugin, ChatGPT đề nghị kết nối các ứng dụng: `gmail`, `google-drive`, `google-calendar`, `outlook-email`, `outlook-calendar`, `sharepoint`, `teams`. Mỗi người đăng nhập một lần bằng tài khoản của mình. Chưa kết nối thì skill vẫn chạy, chỉ không tự lấy dữ liệu hoặc tạo nháp được.

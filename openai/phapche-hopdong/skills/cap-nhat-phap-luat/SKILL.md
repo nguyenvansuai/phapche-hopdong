@@ -28,3 +28,15 @@ description: Đọc và phân tích văn bản pháp luật mới (luật, ngh�
 
 ## Đầu ra
 Thẻ thông tin văn bản · kết luận thuộc diện · bảng điểm mới · bảng nghĩa vụ – hạn – người phụ trách · kế hoạch tuân thủ · bản tin nội bộ · nguồn đã tra (kèm ngày).
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Đọc thư bản tin pháp luật người dùng đăng ký (`from:` nguồn bản tin) để lọc văn bản mới liên quan ngành.
+2. Lưu bản tin nội bộ vào Drive; tạo nháp email gửi các phòng bị ảnh hưởng.
+3. Tạo nhắc hạn trên lịch: ngày văn bản có hiệu lực, hạn hoàn thành việc phải làm, người phụ trách.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

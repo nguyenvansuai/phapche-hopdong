@@ -42,3 +42,15 @@ description: Soạn hợp đồng cho doanh nghiệp Việt Nam theo đúng lo�
 3. Thông tin cần bổ sung.
 4. Gợi ý: xuất .docx (`tao_van_ban_docx` với `co_quoc_hieu=true`, `ten_loai` = tên hợp đồng), ghi vào sổ (`them_hop_dong_vao_so`) sau khi ký.
 5. Câu "Bản nháp tham khảo – hợp đồng giá trị lớn hoặc có yếu tố nước ngoài cần luật sư rà soát trước khi ký."
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Lấy mẫu hợp đồng chuẩn của công ty, hợp đồng cũ cùng loại, báo giá, biên bản thỏa thuận trên Drive hoặc trong email để soạn đúng thông tin đã chốt.
+2. Lưu bản hợp đồng .docx vào thư mục hợp đồng trên Drive, tên file theo quy ước `YYYY-MM-DD_HD_Loai_Doi-tac_v1`.
+3. Tạo nháp email gửi đối tác kèm bản dự thảo (chỉ khi người dùng yêu cầu), ghi rõ "bản dự thảo để trao đổi".
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

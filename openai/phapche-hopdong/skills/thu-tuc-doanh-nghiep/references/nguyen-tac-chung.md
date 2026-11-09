@@ -12,7 +12,9 @@ Cùng một điều khoản, có lợi cho bên mua thì bất lợi cho bên b�
 - Không tự đặt giá, tỷ lệ phạt, lãi suất thay doanh nghiệp: đưa phương án và khuyến nghị kèm lý do.
 
 ## 4. Tính bằng công cụ
-| Việc | Công cụ (MCP `phapche-cong-cu`) |
+Chạy công cụ đi kèm skill: `python3 scripts/cong_cu.py <tên_công_cụ> tham_so=giá_trị`.
+
+| Việc | Công cụ |
 |---|---|
 | Lãi chậm trả | `lai_cham_tra` |
 | Trần phạt vi phạm | `kiem_tra_phat_vi_pham` |
@@ -25,7 +27,8 @@ Cùng một điều khoản, có lợi cho bên mua thì bất lợi cho bên b�
 | Ngày, hạn, âm lịch | `ngay_lam_viec`, `cong_ngay_lich`, `doi_lich_am_duong` |
 | Số tiền bằng chữ | `doc_so_thanh_chu` |
 | Thể thức công văn/nghị quyết | `kiem_tra_the_thuc`, `tao_van_ban_docx` |
-Không có MCP: `python3 scripts/cong_cu.py <tên_công_cụ> tham_so=giá_trị`. Không chạy được code → tự tính, ghi rõ "ước tính".
+
+Không chạy được code → tự tính, ghi rõ "ước tính".
 
 ## 5. Viện dẫn có nhãn
 **[Chắc chắn]** quy định ổn định, đã đối chiếu · **[Cần kiểm tra]** con số dễ đổi, văn bản mới, chưa đối chiếu bản gốc. Bảng văn bản hiện hành: `references/quy-dinh-phap-ly-2026.md`.

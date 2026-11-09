@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `tranh-chap-to-tung`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/tranh-chap-to-tung/references/ho-so-to-tung.md`, `skills/tranh-chap-to-tung/references/nguyen-tac-chung.md`, `skills/tranh-chap-to-tung/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/tranh-chap-to-tung/references/ho-so-to-tung.md`, `skills/tranh-chap-to-tung/references/ket-noi.md`, `skills/tranh-chap-to-tung/references/nguyen-tac-chung.md`, `skills/tranh-chap-to-tung/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/tranh-chap-to-tung/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -50,4 +50,16 @@ Ghi nhận ngày nhận thông báo thụ lý → thời hạn nộp văn bản 
 
 ## Đầu ra
 Sơ đồ con đường giải quyết + khuyến nghị · thẩm quyền dự kiến (có nhãn) · thời hiệu · chi phí ước tính · đơn khởi kiện nháp · danh mục chứng cứ · lịch các mốc.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Gom chứng cứ từ Drive và email thành danh mục tài liệu, chứng cứ kèm đơn khởi kiện; chỉ liệt kê tài liệu thực có.
+2. Tạo nhắc hạn tố tụng trên lịch: hạn nộp tạm ứng án phí, hạn kháng cáo, phiên hòa giải, phiên xử (sau khi xác nhận).
+3. Lưu dự thảo đơn khởi kiện, bản tự khai vào thư mục vụ việc trên Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `quan-ly-hop-dong`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/quan-ly-hop-dong/references/nguyen-tac-chung.md`, `skills/quan-ly-hop-dong/references/playbook-dieu-khoan.md`, `skills/quan-ly-hop-dong/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/quan-ly-hop-dong/references/ket-noi.md`, `skills/quan-ly-hop-dong/references/nguyen-tac-chung.md`, `skills/quan-ly-hop-dong/references/playbook-dieu-khoan.md`, `skills/quan-ly-hop-dong/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/quan-ly-hop-dong/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -24,7 +24,7 @@ Hiển thị dòng sẽ ghi → người dùng xác nhận → `them_hop_dong_va
 Có nhiều hợp đồng (thư mục file): xử lý lần lượt, gom bảng để người dùng duyệt một lần.
 
 ## 2. Nhắc mốc
-`moc_hop_dong` (`trong_so_ngay`, `xuat_ics`) → bảng: `Ngày | Còn bao nhiêu ngày | Việc | Phụ trách`. Mốc "HẠN CUỐI thông báo không gia hạn" là mốc dễ bỏ lỡ nhất – đặt ở đầu. Giao file .ics để người dùng tự nhập lịch (hoặc tạo nháp trên `~~calendar` khi được xác nhận).
+`moc_hop_dong` (`trong_so_ngay`, `xuat_ics`) → bảng: `Ngày | Còn bao nhiêu ngày | Việc | Phụ trách`. Mốc "HẠN CUỐI thông báo không gia hạn" là mốc dễ bỏ lỡ nhất – đặt ở đầu. Giao file .ics để người dùng tự nhập lịch (hoặc tạo nháp trên lịch (Google Calendar / Outlook) khi được xác nhận).
 
 ## 3. Văn bản trong quá trình thực hiện
 | Tình huống | Văn bản | Lưu ý |
@@ -43,4 +43,17 @@ Từ sổ CSV: tổng số, tổng giá trị theo đối tác/loại, hợp đ�
 ## Lưu ý
 - Bản gốc hợp đồng: lưu tập trung, có danh mục; bản điện tử ký số lưu file gốc .pdf có chữ ký (skill lưu trữ của bộ `hanhchinh-nhansu`).
 - Ghi sổ là hành động cần xác nhận (POLICY.md).
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Google Calendar** · **Gmail** · **DocuSign (ChatGPT chưa có connector này)** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Quét thư mục hợp đồng trên Drive để lập hoặc cập nhật sổ theo dõi (Sheets): đối tác, giá trị, ngày hiệu lực, hạn, điều khoản gia hạn tự động.
+2. Tạo sự kiện nhắc mốc trên lịch: hạn thông báo không gia hạn, hạn thanh toán, hạn bảo hành, ngày hết hạn (nhắc trước 30 và 7 ngày) – sau khi xác nhận danh sách.
+3. Tạo nháp email đối chiếu công nợ, đề nghị thanh lý, thông báo gia hạn gửi đối tác.
+4. Hợp đồng đã chốt và được duyệt: tạo phong bì ký DocuSign ở trạng thái nháp; theo dõi ai đã ký, ai chưa; tải bản đã ký về thư mục lưu.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

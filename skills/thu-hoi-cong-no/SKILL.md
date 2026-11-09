@@ -41,3 +41,16 @@ Bảng: `Phương án | Chi phí ước tính | Thời gian | Khả năng thu h�
 
 ## Đầu ra
 Bảng đánh giá vụ việc · lộ trình có ngày cụ thể · các văn bản soạn sẵn (nháp) · bảng tính lãi · so sánh phương án · danh mục chứng cứ cần bổ sung.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Tìm chứng cứ công nợ: hợp đồng, hóa đơn, biên bản đối chiếu, email khách xác nhận nợ hoặc hứa trả (`from:khach after:`) – đây là căn cứ tính lại thời hiệu.
+2. Tạo nháp thư nhắc nợ, thư đề nghị đối chiếu, thông báo đòi nợ chính thức theo từng nấc.
+3. Tạo nhắc hạn trên lịch: hạn khách hứa trả, mốc chuyển nấc tiếp theo, mốc hết thời hiệu khởi kiện.
+4. Lưu hồ sơ đòi nợ (bảng tính lãi, văn bản đã gửi) vào một thư mục riêng trên Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

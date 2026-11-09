@@ -39,3 +39,15 @@ Ghi nhận ngày nhận thông báo thụ lý → thời hạn nộp văn bản 
 
 ## Đầu ra
 Sơ đồ con đường giải quyết + khuyến nghị · thẩm quyền dự kiến (có nhãn) · thời hiệu · chi phí ước tính · đơn khởi kiện nháp · danh mục chứng cứ · lịch các mốc.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Gom chứng cứ từ Drive và email thành danh mục tài liệu, chứng cứ kèm đơn khởi kiện; chỉ liệt kê tài liệu thực có.
+2. Tạo nhắc hạn tố tụng trên lịch: hạn nộp tạm ứng án phí, hạn kháng cáo, phiên hòa giải, phiên xử (sau khi xác nhận).
+3. Lưu dự thảo đơn khởi kiện, bản tự khai vào thư mục vụ việc trên Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

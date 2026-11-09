@@ -1,0 +1,111 @@
+{
+  "connectors": ["gmail", "google-drive", "google-calendar", "microsoft-365", "docusign"],
+  "chung": [
+    "**Đặc quyền và bảo mật thông tin pháp lý**: không đưa nội dung hợp đồng, hồ sơ tranh chấp, ý kiến pháp lý nội bộ vào thư gửi đối phương hoặc người ngoài khi người dùng chưa duyệt; tạo nháp thư gửi đối phương phải ghi rõ đây là bản đề xuất.",
+    "**Không tự hành động thay doanh nghiệp**: không gửi văn bản đòi nợ, thông báo chấm dứt, đơn khởi kiện; không gửi phong bì ký; không chấp nhận điều khoản thay người dùng. Tất cả chỉ là nháp để người có thẩm quyền quyết định."
+  ],
+  "chua_co": [
+    "Cổng thông tin quốc gia về đăng ký doanh nghiệp, Cổng dịch vụ công, cổng nộp đơn sở hữu trí tuệ (IP Việt Nam), Tòa án: không có connector; skill chuẩn bị hồ sơ để bạn tự nộp.",
+    "Ký số trong nước (VNPT-CA, Viettel-CA, FPT-CA, MISA eSign): chưa có connector chính thức; dùng DocuSign (trên Claude) hoặc tự ký trên phần mềm của nhà cung cấp.",
+    "Cơ sở dữ liệu văn bản pháp luật (vbpl.vn, Công báo, Thư viện Pháp luật): không có connector; dùng tìm kiếm web khi ứng dụng AI có sẵn."
+  ],
+  "skills": {
+    "soan-hop-dong": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Lấy mẫu hợp đồng chuẩn của công ty, hợp đồng cũ cùng loại, báo giá, biên bản thỏa thuận trên Drive hoặc trong email để soạn đúng thông tin đã chốt.",
+        "Lưu bản hợp đồng .docx vào thư mục hợp đồng trên Drive, tên file theo quy ước `YYYY-MM-DD_HD_Loai_Doi-tac_v1`.",
+        "Tạo nháp email gửi đối tác kèm bản dự thảo (chỉ khi người dùng yêu cầu), ghi rõ \"bản dự thảo để trao đổi\"."
+      ]
+    },
+    "ra-soat-hop-dong": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Mở hợp đồng cần rà trực tiếp từ Drive hoặc tệp đính kèm trong thư đối tác gửi (`from:doitac has:attachment filename:docx`).",
+        "Đọc chuỗi email trao đổi trước đó để biết điều khoản nào đã thỏa thuận miệng mà hợp đồng chưa ghi.",
+        "Lưu báo cáo rà soát và bản sửa đề xuất thành file mới cạnh file gốc; không ghi đè bản của đối tác."
+      ]
+    },
+    "so-sanh-phien-ban": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Lấy hai phiên bản từ Drive (lịch sử phiên bản hoặc hai file) hoặc từ hai thư: bản mình gửi đi và bản đối tác gửi lại.",
+        "Lưu bảng so sánh thay đổi vào Drive; tạo nháp email hỏi lại đối tác về các chỗ \"sửa không báo\"."
+      ]
+    },
+    "dam-phan-hop-dong": {
+      "dung": ["gmail", "google-calendar", "google-drive"],
+      "viec": [
+        "Đọc toàn bộ chuỗi email đàm phán để lập bảng: điều khoản – đề nghị của ta – phản hồi của đối tác – trạng thái.",
+        "Tạo nháp email phản hồi đối tác theo phương án nhượng bộ người dùng đã chọn.",
+        "Tìm giờ và tạo lịch họp đàm phán (sau khi xác nhận); lưu kịch bản họp vào Drive."
+      ]
+    },
+    "quan-ly-hop-dong": {
+      "dung": ["google-drive", "google-calendar", "gmail", "docusign"],
+      "viec": [
+        "Quét thư mục hợp đồng trên Drive để lập hoặc cập nhật sổ theo dõi (Sheets): đối tác, giá trị, ngày hiệu lực, hạn, điều khoản gia hạn tự động.",
+        "Tạo sự kiện nhắc mốc trên lịch: hạn thông báo không gia hạn, hạn thanh toán, hạn bảo hành, ngày hết hạn (nhắc trước 30 và 7 ngày) – sau khi xác nhận danh sách.",
+        "Tạo nháp email đối chiếu công nợ, đề nghị thanh lý, thông báo gia hạn gửi đối tác.",
+        "Hợp đồng đã chốt và được duyệt: tạo phong bì ký DocuSign ở trạng thái nháp; theo dõi ai đã ký, ai chưa; tải bản đã ký về thư mục lưu."
+      ]
+    },
+    "thu-hoi-cong-no": {
+      "dung": ["gmail", "google-drive", "google-calendar"],
+      "viec": [
+        "Tìm chứng cứ công nợ: hợp đồng, hóa đơn, biên bản đối chiếu, email khách xác nhận nợ hoặc hứa trả (`from:khach after:`) – đây là căn cứ tính lại thời hiệu.",
+        "Tạo nháp thư nhắc nợ, thư đề nghị đối chiếu, thông báo đòi nợ chính thức theo từng nấc.",
+        "Tạo nhắc hạn trên lịch: hạn khách hứa trả, mốc chuyển nấc tiếp theo, mốc hết thời hiệu khởi kiện.",
+        "Lưu hồ sơ đòi nợ (bảng tính lãi, văn bản đã gửi) vào một thư mục riêng trên Drive."
+      ]
+    },
+    "tranh-chap-to-tung": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Gom chứng cứ từ Drive và email thành danh mục tài liệu, chứng cứ kèm đơn khởi kiện; chỉ liệt kê tài liệu thực có.",
+        "Tạo nhắc hạn tố tụng trên lịch: hạn nộp tạm ứng án phí, hạn kháng cáo, phiên hòa giải, phiên xử (sau khi xác nhận).",
+        "Lưu dự thảo đơn khởi kiện, bản tự khai vào thư mục vụ việc trên Drive."
+      ]
+    },
+    "thu-tuc-doanh-nghiep": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Lấy điều lệ, giấy chứng nhận đăng ký doanh nghiệp, sổ đăng ký thành viên/cổ đông trên Drive để điền hồ sơ đúng thông tin hiện hành.",
+        "Lưu bộ hồ sơ thay đổi (thông báo, quyết định, biên bản) vào Drive; tạo nháp email gửi thành viên, cổ đông ký.",
+        "Tạo nhắc hạn: thông báo thay đổi trong 10 ngày, cập nhật chủ sở hữu hưởng lợi, hạn góp vốn."
+      ]
+    },
+    "hop-hoi-dong-quan-tri": {
+      "dung": ["google-calendar", "gmail", "google-drive", "microsoft-365"],
+      "viec": [
+        "Tính lịch mời họp theo luật (bằng công cụ), rồi tạo sự kiện họp và nhắc các mốc gửi thư mời, chốt danh sách cổ đông (sau khi xác nhận).",
+        "Tạo nháp thư mời họp kèm tài liệu gửi cổ đông, thành viên; lưu bộ tài liệu họp vào Drive.",
+        "Sau họp: lấy biên bản kiểm phiếu, ghi chú để lập biên bản, nghị quyết; lưu vào Drive."
+      ]
+    },
+    "bao-ve-du-lieu-ca-nhan": {
+      "dung": ["google-drive", "gmail"],
+      "viec": [
+        "Rà thư mục chia sẻ trên Drive để lập bản đồ dữ liệu: file nào chứa dữ liệu cá nhân, ai đang được chia sẻ – chỉ báo cáo, không tự đổi quyền.",
+        "Lưu chính sách, form đồng ý, hồ sơ đánh giá tác động vào Drive.",
+        "Sự cố lộ lọt: tạo nháp thông báo gửi cơ quan chức năng và chủ thể dữ liệu, có mốc 72 giờ."
+      ]
+    },
+    "so-huu-tri-tue": {
+      "dung": ["google-drive", "gmail", "google-calendar"],
+      "viec": [
+        "Lấy mẫu nhãn hiệu, logo, tài liệu chứng minh sử dụng trên Drive để chuẩn bị hồ sơ đăng ký.",
+        "Tạo nháp thư cảnh báo xâm phạm gửi bên bán hàng nhái, thư đề nghị gỡ sản phẩm gửi sàn.",
+        "Tạo nhắc hạn: hạn trả lời thông báo của Cục, hạn gia hạn văn bằng (10 năm), hạn hợp đồng li-xăng."
+      ]
+    },
+    "cap-nhat-phap-luat": {
+      "dung": ["gmail", "google-drive", "google-calendar"],
+      "viec": [
+        "Đọc thư bản tin pháp luật người dùng đăng ký (`from:` nguồn bản tin) để lọc văn bản mới liên quan ngành.",
+        "Lưu bản tin nội bộ vào Drive; tạo nháp email gửi các phòng bị ảnh hưởng.",
+        "Tạo nhắc hạn trên lịch: ngày văn bản có hiệu lực, hạn hoàn thành việc phải làm, người phụ trách."
+      ]
+    }
+  }
+}

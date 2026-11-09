@@ -39,3 +39,15 @@ description: Tuân thủ bảo vệ dữ liệu cá nhân cho doanh nghiệp Vi�
 
 ## Đầu ra
 Bản đồ dữ liệu · danh sách khoảng trống tuân thủ (ưu tiên) · tài liệu soạn sẵn (chính sách, form đồng ý, điều khoản hợp đồng, quy trình sự cố) · kế hoạch 30-60-90 ngày · các điểm [Cần kiểm tra] cần luật sư/văn bản gốc xác nhận.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Rà thư mục chia sẻ trên Drive để lập bản đồ dữ liệu: file nào chứa dữ liệu cá nhân, ai đang được chia sẻ – chỉ báo cáo, không tự đổi quyền.
+2. Lưu chính sách, form đồng ý, hồ sơ đánh giá tác động vào Drive.
+3. Sự cố lộ lọt: tạo nháp thông báo gửi cơ quan chức năng và chủ thể dữ liệu, có mốc 72 giờ.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

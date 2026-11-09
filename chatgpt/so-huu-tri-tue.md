@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `so-huu-tri-tue`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/so-huu-tri-tue/references/nguyen-tac-chung.md`, `skills/so-huu-tri-tue/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/so-huu-tri-tue/references/ket-noi.md`, `skills/so-huu-tri-tue/references/nguyen-tac-chung.md`, `skills/so-huu-tri-tue/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/so-huu-tri-tue/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -47,4 +47,16 @@ Hợp đồng chuyển nhượng quyền sở hữu nhãn hiệu phải đăng k
 
 ## Đầu ra
 Báo cáo tra cứu sơ bộ (theo dữ liệu người dùng cung cấp/kết quả tìm được) + đánh giá rủi ro · danh mục nhóm Nice · checklist hồ sơ · điều khoản hợp đồng · thư cảnh báo nháp · lịch gia hạn.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Lấy mẫu nhãn hiệu, logo, tài liệu chứng minh sử dụng trên Drive để chuẩn bị hồ sơ đăng ký.
+2. Tạo nháp thư cảnh báo xâm phạm gửi bên bán hàng nhái, thư đề nghị gỡ sản phẩm gửi sàn.
+3. Tạo nhắc hạn: hạn trả lời thông báo của Cục, hạn gia hạn văn bằng (10 năm), hạn hợp đồng li-xăng.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

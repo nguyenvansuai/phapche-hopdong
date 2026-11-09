@@ -1,6 +1,6 @@
 # Plugin Pháp chế – Hợp đồng cho doanh nghiệp Việt Nam 2026
 
-Plugin trọn bộ cho **pháp chế doanh nghiệp, chủ doanh nghiệp và người phụ trách ký kết**: **12 skill**, **6 lệnh quy trình**, **2 agent** (luật sư bên đối phương, thẩm định độc lập) và **1 connector MCP** với 17 công cụ tính toán, so sánh, theo dõi theo pháp luật hiện hành:
+Plugin trọn bộ cho **pháp chế doanh nghiệp, chủ doanh nghiệp và người phụ trách ký kết**: **12 skill**, **6 lệnh quy trình**, **2 agent** (luật sư bên đối phương, thẩm định độc lập), **connector khai báo sẵn** (Gmail, Google Drive, Google Calendar, Microsoft 365, DocuSign) và 17 công cụ tính toán, so sánh, theo dõi đi kèm skill theo pháp luật hiện hành:
 
 - **Bộ luật Dân sự 2015**, **Luật Thương mại 2005** (phạt ≤ 8%, lãi chậm trả, thời hiệu 2 năm), **Luật Doanh nghiệp 2020 sửa đổi bởi Luật 76/2025** (chủ sở hữu hưởng lợi), **NĐ 168/2025** về đăng ký doanh nghiệp.
 - **BLTTDS sửa đổi 2025**: Tòa án nhân dân khu vực từ 01/7/2025; án phí theo **NQ 326/2016**.
@@ -35,8 +35,11 @@ Nguyên tắc: **luôn hỏi bạn đứng ở bên nào**, **không bịa** (th
 - `tham-dinh-phap-ly` – thẩm định độc lập văn bản trước khi dùng.
 
 ### Connector
-- **Có sẵn:** MCP `phapche-cong-cu` (Python 3.8+, chạy trên máy) – xem [CONNECTORS.md](CONNECTORS.md).
-- **Tùy chọn:** Google Drive/OneDrive, Gmail/Outlook, Calendar, tìm kiếm web, Notion/Confluence.
+<!-- KET-NOI-README:BAT-DAU (sinh tự động bởi scripts/ket_noi.py) -->
+Plugin **khai báo sẵn** connector: Gmail, Google Drive, Google Calendar, Microsoft 365 (Outlook, OneDrive/SharePoint, Teams), DocuSign (ChatGPT chưa có connector này). Cài plugin xong chỉ cần bấm kết nối và đăng nhập một lần (tab **Connectors** của plugin). Mỗi skill ghi rõ dùng connector vào việc gì; chưa kết nối thì skill vẫn chạy, chỉ không tự lấy dữ liệu hoặc tạo nháp được. Email chỉ tạo bản nháp, mọi thao tác ghi phải được bạn xác nhận. Chi tiết: [CONNECTORS.md](CONNECTORS.md).
+<!-- KET-NOI-README:KET-THUC -->
+
+Ví dụ việc skill làm qua connector: mở hợp đồng từ Drive hoặc email đối tác để rà soát; đọc chuỗi email đàm phán và tạo nháp phản hồi; nhắc hạn gia hạn, thanh toán, thời hiệu trên lịch; tạo phong bì ký DocuSign cho hợp đồng đã duyệt.
 
 ## Cài đặt
 
@@ -59,14 +62,14 @@ Nguyên tắc: **luôn hỏi bạn đứng ở bên nào**, **không bịa** (th
 Cập nhật: `/plugin marketplace update phapche-hopdong`
 
 ### Claude Desktop / Cowork
-Cài từ file [`dist/phapche-hopdong.plugin`](dist/).
+Cài từ file [`dist/phapche-hopdong.plugin`](dist/) (gồm skill, lệnh, agent và connector khai báo sẵn), rồi mở tab **Connectors** của plugin để kết nối.
 
 ### Claude.ai – từng skill
-Bật **Settings → Capabilities → Code execution and file creation**, rồi **Skills → Upload skill** với file zip trong [`dist/`](dist/) (ví dụ `thu-hoi-cong-no.zip`). Mỗi zip có sẵn công cụ tính toán.
+Bật **Settings → Capabilities → Code execution and file creation**, rồi **Skills → Upload skill** với file zip trong [`dist/`](dist/) (ví dụ `thu-hoi-cong-no.zip`). Mỗi zip có sẵn công cụ tính toán. Skill tải lên kiểu này không tự khai báo connector: bật Gmail, Calendar, Drive trong **Settings → Connectors** để skill dùng được.
 
 ### ChatGPT / Codex – cả bộ plugin (OpenAI)
 
-Gói plugin cho ChatGPT và Codex nằm ở [`openai/phapche-hopdong/`](openai/phapche-hopdong/), theo cấu trúc portable của OpenAI (`plugin.json`, `skills/`, `mcp.json`), gồm **20 skill** (lệnh quy trình và agent của bản Claude đã được chuyển thành skill).
+Gói plugin cho ChatGPT và Codex nằm ở [`openai/phapche-hopdong/`](openai/phapche-hopdong/), theo cấu trúc portable của OpenAI (`plugin.json`, `skills/`, `.app.json`), gồm **20 skill** (lệnh quy trình và agent của bản Claude đã được chuyển thành skill).
 
 **ChatGPT desktop / Codex** – cài cá nhân, không cần OpenAI duyệt:
 
@@ -80,9 +83,9 @@ codex plugin add phapche-hopdong@phapche-hopdong
 
 Hoặc trong ứng dụng ChatGPT desktop: **Plugins** → chọn nguồn **Pháp chế – Hợp đồng VN** → **Install**. Khi dùng: mở chat chế độ **Work**, gõ `@` và chọn plugin.
 
-Gói kèm MCP server chạy trên máy (cần Python 3.8+) nên thuộc loại **chỉ dùng trên desktop**. Skill vẫn tự tính bằng `scripts/cong_cu.py` khi không có MCP.
+Gói khai báo sẵn connector của ChatGPT trong `.app.json` (danh sách ở [CONNECTORS.md](CONNECTORS.md)): khi cài, ChatGPT đề nghị kết nối từng ứng dụng, mỗi người đăng nhập một lần. Không cần cài Python hay chạy server trên máy.
 
-**ChatGPT web / chia sẻ rộng**: muốn plugin xuất hiện trong thư mục plugin chung của ChatGPT phải gửi OpenAI duyệt qua [cổng nộp plugin](https://platform.openai.com/plugins) (cần xác minh danh tính; plugin có MCP chạy cục bộ hiện chỉ dành cho đối tác được OpenAI chấp thuận). File nén sẵn để nộp: [`dist/phapche-hopdong-chatgpt.zip`](dist/). Quản trị viên workspace ChatGPT có thể **Publish** plugin cá nhân cho cả workspace.
+**ChatGPT web / chia sẻ rộng**: muốn plugin xuất hiện trong thư mục plugin chung của ChatGPT phải gửi OpenAI duyệt qua [cổng nộp plugin](https://platform.openai.com/plugins) (cần xác minh danh tính). File nén sẵn để nộp: [`dist/phapche-hopdong-chatgpt.zip`](dist/). Quản trị viên workspace ChatGPT có thể **Publish** plugin cá nhân cho cả workspace.
 
 Sau khi sửa skill, sinh lại gói: `python3 scripts/build_openai.py`.
 
@@ -106,7 +109,7 @@ python3 tests/test_cong_cu.py
 python3 scripts/build.py
 ```
 
-Cấu trúc giống bộ [hanhchinh-nhansu](https://github.com/nguyenvansuai/hanhchinh-nhansu): `skills/`, `commands/`, `agents/`, `mcp/server.py` (không phụ thuộc thư viện), `tools/` (công cụ), `shared/` (tài liệu dùng chung), `scripts/build.py` (sinh marketplace, chatgpt, dist).
+Cấu trúc giống bộ [hanhchinh-nhansu](https://github.com/nguyenvansuai/hanhchinh-nhansu): `skills/`, `commands/`, `agents/`, `tools/` (công cụ, build chép vào từng skill), `scripts/ket_noi.json` (connector), `shared/` (tài liệu dùng chung), `scripts/build.py` (sinh marketplace, chatgpt, dist).
 
 ## Lưu ý pháp lý
 Cập nhật đến **11/2026**. Mục **[Cần kiểm tra]** phải đối chiếu văn bản gốc (vbpl.vn, Công báo). Plugin hỗ trợ pháp chế nội bộ – **không thay thế luật sư**; giao dịch lớn, tranh chấp, yếu tố nước ngoài cần tham vấn chuyên gia.

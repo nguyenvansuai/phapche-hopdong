@@ -6,7 +6,8 @@
  2. Chép bộ công cụ tools/ + cong_cu.py vào skills/<skill>/scripts/ cho skill cần tính toán
  3. Sinh .claude-plugin/marketplace.json: gói trọn bộ (plugin đầy đủ) + từng skill riêng
  4. Sinh chatgpt/<skill>.md
- 5. Đóng gói dist/<skill>.zip (upload claude.ai) và dist/<plugin>.plugin (Cowork/Claude Desktop)
+ 5. Đóng gói dist/<skill>.zip (upload claude.ai); scripts/ket_noi.py sinh connector (.mcp.json, khối "Kết nối ứng dụng"
+    trong SKILL.md, mcpServers cho skill lẻ) và dist/<plugin>.plugin (Cowork/Claude Desktop)
  6. Kiểm tra: frontmatter, file được nhắc tới có tồn tại, commands/agents hợp lệ
 """
 import json
@@ -114,13 +115,6 @@ def dong_goi():
     for sk in ds_skill():
         with zipfile.ZipFile(dist / f"{sk.name}.zip", "w", zipfile.ZIP_DEFLATED) as z:
             _zip_thu_muc(z, sk, SKILLS)
-    with zipfile.ZipFile(dist / f"{PLUGIN['name']}.plugin", "w", zipfile.ZIP_DEFLATED) as z:
-        for ten in [".claude-plugin/plugin.json", ".mcp.json", "README.md", "CONNECTORS.md", "POLICY.md", "LICENSE"]:
-            if (GOC / ten).exists():
-                z.write(GOC / ten, ten)
-        for d in ["skills", "commands", "agents", "hooks", "mcp", "tools", "shared"]:
-            if (GOC / d).exists():
-                _zip_thu_muc(z, GOC / d, GOC)
 
 
 def kiem_tra():
@@ -154,11 +148,16 @@ def kiem_tra():
 
 
 if __name__ == "__main__":
+    import sys
+    sys.path.insert(0, str(GOC / "scripts"))
+    import ket_noi
+    ket_noi.chuan_bi()
     dong_bo()
     sinh_marketplace()
     cb = sinh_chatgpt()
-    loi = kiem_tra()
+    loi = ket_noi.kiem_tra() + kiem_tra()
     dong_goi()
+    ket_noi.hoan_tat()
     print(f"Đã build {len(ds_skill())} skill cho plugin {PLUGIN['name']}.")
     if (GOC / "scripts" / "build_openai.py").exists():  # sinh luôn gói ChatGPT/Codex từ skill vừa build
         import subprocess

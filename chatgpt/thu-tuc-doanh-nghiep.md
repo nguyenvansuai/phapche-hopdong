@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `thu-tuc-doanh-nghiep`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/thu-tuc-doanh-nghiep/references/nguyen-tac-chung.md`, `skills/thu-tuc-doanh-nghiep/references/quy-dinh-phap-ly-2026.md`, `skills/thu-tuc-doanh-nghiep/references/thu-tuc-dkdn.md`.
+4. Knowledge: tải lên `skills/thu-tuc-doanh-nghiep/references/ket-noi.md`, `skills/thu-tuc-doanh-nghiep/references/nguyen-tac-chung.md`, `skills/thu-tuc-doanh-nghiep/references/quy-dinh-phap-ly-2026.md`, `skills/thu-tuc-doanh-nghiep/references/thu-tuc-dkdn.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/thu-tuc-doanh-nghiep/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -42,4 +42,16 @@ Doanh nghiệp có địa chỉ ghi theo đơn vị hành chính cũ: thường 
 
 ## Đầu ra
 Danh sách hồ sơ theo đúng trường hợp · nghị quyết/quyết định nội bộ nháp · bảng thông tin CSHHL · lịch các mốc (10 ngày, 90 ngày...) · checklist việc sau khi có kết quả.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Lấy điều lệ, giấy chứng nhận đăng ký doanh nghiệp, sổ đăng ký thành viên/cổ đông trên Drive để điền hồ sơ đúng thông tin hiện hành.
+2. Lưu bộ hồ sơ thay đổi (thông báo, quyết định, biên bản) vào Drive; tạo nháp email gửi thành viên, cổ đông ký.
+3. Tạo nhắc hạn: thông báo thay đổi trong 10 ngày, cập nhật chủ sở hữu hưởng lợi, hạn góp vốn.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

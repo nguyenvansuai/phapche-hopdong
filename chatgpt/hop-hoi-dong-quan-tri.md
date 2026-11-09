@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `hop-hoi-dong-quan-tri`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/hop-hoi-dong-quan-tri/references/mau-hop-quan-tri.md`, `skills/hop-hoi-dong-quan-tri/references/nguyen-tac-chung.md`, `skills/hop-hoi-dong-quan-tri/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/hop-hoi-dong-quan-tri/references/ket-noi.md`, `skills/hop-hoi-dong-quan-tri/references/mau-hop-quan-tri.md`, `skills/hop-hoi-dong-quan-tri/references/nguyen-tac-chung.md`, `skills/hop-hoi-dong-quan-tri/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/hop-hoi-dong-quan-tri/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -48,4 +48,16 @@ Giao dịch giữa công ty với cổ đông lớn, thành viên HĐQT, Giám �
 
 ## Đầu ra
 Lịch chuẩn bị có ngày cụ thể · kết quả kiểm tra tỷ lệ · bộ văn bản họp nháp · danh sách việc sau họp (công bố, đăng ký thay đổi – skill `thu-tuc-doanh-nghiep`).
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Calendar** · **Gmail** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Tính lịch mời họp theo luật (bằng công cụ), rồi tạo sự kiện họp và nhắc các mốc gửi thư mời, chốt danh sách cổ đông (sau khi xác nhận).
+2. Tạo nháp thư mời họp kèm tài liệu gửi cổ đông, thành viên; lưu bộ tài liệu họp vào Drive.
+3. Sau họp: lấy biên bản kiểm phiếu, ghi chú để lập biên bản, nghị quyết; lưu vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

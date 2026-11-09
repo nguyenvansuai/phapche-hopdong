@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `thu-hoi-cong-no`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/thu-hoi-cong-no/references/mau-doi-no.md`, `skills/thu-hoi-cong-no/references/nguyen-tac-chung.md`, `skills/thu-hoi-cong-no/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/thu-hoi-cong-no/references/ket-noi.md`, `skills/thu-hoi-cong-no/references/mau-doi-no.md`, `skills/thu-hoi-cong-no/references/nguyen-tac-chung.md`, `skills/thu-hoi-cong-no/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/thu-hoi-cong-no/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -52,4 +52,17 @@ Bảng: `Phương án | Chi phí ước tính | Thời gian | Khả năng thu h�
 
 ## Đầu ra
 Bảng đánh giá vụ việc · lộ trình có ngày cụ thể · các văn bản soạn sẵn (nháp) · bảng tính lãi · so sánh phương án · danh mục chứng cứ cần bổ sung.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Drive** · **Google Calendar** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Tìm chứng cứ công nợ: hợp đồng, hóa đơn, biên bản đối chiếu, email khách xác nhận nợ hoặc hứa trả (`from:khach after:`) – đây là căn cứ tính lại thời hiệu.
+2. Tạo nháp thư nhắc nợ, thư đề nghị đối chiếu, thông báo đòi nợ chính thức theo từng nấc.
+3. Tạo nhắc hạn trên lịch: hạn khách hứa trả, mốc chuyển nấc tiếp theo, mốc hết thời hiệu khởi kiện.
+4. Lưu hồ sơ đòi nợ (bảng tính lãi, văn bản đã gửi) vào một thư mục riêng trên Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

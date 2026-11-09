@@ -36,3 +36,15 @@ description: Rà soát hợp đồng do đối tác gửi hoặc hợp đồng s
 - Không phóng đại rủi ro để tỏ ra kỹ lưỡng: chỉ 🔴 khi hậu quả thật sự nghiêm trọng.
 - Không khẳng định "hợp đồng hợp pháp/an toàn"; nói "chưa phát hiện thêm rủi ro trong phạm vi đã rà".
 - Hợp đồng có yếu tố nước ngoài, giá trị lớn, M&A, bất động sản, vay vốn → khuyến nghị luật sư rà soát.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `references/ket-noi.md` trước khi dùng.
+
+1. Mở hợp đồng cần rà trực tiếp từ Drive hoặc tệp đính kèm trong thư đối tác gửi (`from:doitac has:attachment filename:docx`).
+2. Đọc chuỗi email trao đổi trước đó để biết điều khoản nào đã thỏa thuận miệng mà hợp đồng chưa ghi.
+3. Lưu báo cáo rà soát và bản sửa đề xuất thành file mới cạnh file gốc; không ghi đè bản của đối tác.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->

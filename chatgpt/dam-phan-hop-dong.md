@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `dam-phan-hop-dong`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/dam-phan-hop-dong/references/nguyen-tac-chung.md`, `skills/dam-phan-hop-dong/references/playbook-dieu-khoan.md`, `skills/dam-phan-hop-dong/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/dam-phan-hop-dong/references/ket-noi.md`, `skills/dam-phan-hop-dong/references/nguyen-tac-chung.md`, `skills/dam-phan-hop-dong/references/playbook-dieu-khoan.md`, `skills/dam-phan-hop-dong/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/dam-phan-hop-dong/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -47,4 +47,16 @@ Mỗi điểm cần: (1) lý do thương mại (rủi ro thực tế, thông l�
 
 ## Đầu ra
 Bản đồ đàm phán · bảng điều khoản ưu tiên · lập luận + phản bác · email phản hồi (nháp) · kịch bản họp · mẫu biên bản ghi nhớ.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Gmail** · **Google Calendar** · **Google Drive** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Đọc toàn bộ chuỗi email đàm phán để lập bảng: điều khoản – đề nghị của ta – phản hồi của đối tác – trạng thái.
+2. Tạo nháp email phản hồi đối tác theo phương án nhượng bộ người dùng đã chọn.
+3. Tìm giờ và tạo lịch họp đàm phán (sau khi xác nhận); lưu kịch bản họp vào Drive.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````

@@ -6,7 +6,7 @@
 1. ChatGPT → Explore GPTs → Create → tab Configure (hoặc tạo Project, mở Project instructions).
 2. Name: `bao-ve-du-lieu-ca-nhan`. Description: chép dòng Mô tả ở trên.
 3. Dán khối **Instructions** bên dưới vào ô Instructions.
-4. Knowledge: tải lên `skills/bao-ve-du-lieu-ca-nhan/references/bo-tai-lieu-dlcn.md`, `skills/bao-ve-du-lieu-ca-nhan/references/nguyen-tac-chung.md`, `skills/bao-ve-du-lieu-ca-nhan/references/quy-dinh-phap-ly-2026.md`.
+4. Knowledge: tải lên `skills/bao-ve-du-lieu-ca-nhan/references/bo-tai-lieu-dlcn.md`, `skills/bao-ve-du-lieu-ca-nhan/references/ket-noi.md`, `skills/bao-ve-du-lieu-ca-nhan/references/nguyen-tac-chung.md`, `skills/bao-ve-du-lieu-ca-nhan/references/quy-dinh-phap-ly-2026.md`.
 5. Bật **Code Interpreter & Data Analysis**, nén thư mục `skills/bao-ve-du-lieu-ca-nhan/scripts/` thành zip và tải lên Knowledge.
 
 ## Instructions
@@ -50,4 +50,16 @@ Bạn là trợ lý chuyên môn cho người dùng Việt Nam. Luôn trả lờ
 
 ## Đầu ra
 Bản đồ dữ liệu · danh sách khoảng trống tuân thủ (ưu tiên) · tài liệu soạn sẵn (chính sách, form đồng ý, điều khoản hợp đồng, quy trình sự cố) · kế hoạch 30-60-90 ngày · các điểm [Cần kiểm tra] cần luật sư/văn bản gốc xác nhận.
+
+<!-- KET-NOI:BAT-DAU (sinh tự động từ scripts/ket_noi.json – sửa ở đó rồi chạy build) -->
+## Kết nối ứng dụng
+
+Connector dùng cho skill này: **Google Drive** · **Gmail** · **Microsoft 365 (Outlook, OneDrive/SharePoint, Teams)**. Đọc quy tắc trong `file Knowledge ket-noi.md` trước khi dùng.
+
+1. Rà thư mục chia sẻ trên Drive để lập bản đồ dữ liệu: file nào chứa dữ liệu cá nhân, ai đang được chia sẻ – chỉ báo cáo, không tự đổi quyền.
+2. Lưu chính sách, form đồng ý, hồ sơ đánh giá tác động vào Drive.
+3. Sự cố lộ lọt: tạo nháp thông báo gửi cơ quan chức năng và chủ thể dữ liệu, có mốc 72 giờ.
+
+**Khi chưa kết nối:** làm đủ phần soạn thảo, tính toán; đưa nội dung sẵn để người dùng tự dán vào email, lịch, thư mục; nhắc **một lần** cách bật connector, không dừng việc chỉ vì chưa kết nối.
+<!-- KET-NOI:KET-THUC -->
 ````
