@@ -1,0 +1,65 @@
+{
+  "mau": "#3730A3",
+  "plugin_ten": "Pháp chế – Hợp đồng",
+  "tieu_de": "Đối tác \"chỉ sửa câu chữ\": 4 điều khoản đã đổi",
+  "tinh_huong": "Pháp chế công ty sản xuất · đại lý gửi lại hợp đồng phân phối, nói chỉ chỉnh câu chữ · sếp cần ý kiến trước 17h để ký kịp hàng Tết",
+  "thu_cong": {
+    "buoc": [
+      "Mở 2 file Word cạnh nhau, dò từng dòng",
+      "Word Compare lệch vì đối tác đổi định dạng",
+      "Đọc lướt vì tin \"chỉ sửa câu chữ\"",
+      "Tự nhớ trần phạt, quy định trọng tài",
+      "Viết email phản hồi từ đầu"
+    ],
+    "thoi_gian": "2–3 giờ, dễ sót khi gấp",
+    "rui_ro": [
+      "Sót \"được\" → \"không được\": mất kênh bán 3 tỉnh",
+      "Đồng ý thanh toán 60 ngày, phạt 12% vượt trần luật",
+      "Ký điều khoản trọng tài xa trụ sở, chi phí cao"
+    ]
+  },
+  "plugin": {
+    "buoc": [
+      "Đính kèm 2 bản + email, nói rõ mình là bên cung cấp",
+      "Công cụ so_sanh_van_ban so theo từng Điều, đánh dấu chỗ nhạy cảm",
+      "kiem_tra_phat_vi_pham tính phạt 12% so với trần 8%",
+      "Agent luật sư đối phương dự đoán phản bác",
+      "Ra câu chữ sửa lại + email phản hồi"
+    ],
+    "thoi_gian": "Khoảng 15 phút, có bảng thay đổi đầy đủ",
+    "loi_ich": [
+      "Không sót thay đổi; phân biệt sửa chính tả với sửa nội dung",
+      "Có căn cứ luật và phương án nhượng bộ để đàm phán",
+      "Có sẵn email trả lời, sếp duyệt là gửi"
+    ]
+  },
+  "demo": {
+    "ten": "Hợp đồng phân phối Sao Mai – Phú Hưng",
+    "mo_ta": "Bên A: Công ty CP Thực phẩm Sao Mai (giả lập) · 2 bản hợp đồng đặt sẵn trong dau-vao/",
+    "dau_vao": [
+      "HD-phan-phoi_ban-gui-05-11.docx",
+      "HD-phan-phoi_ban-dai-ly-sua.docx (cài sẵn 5 chỗ sửa)",
+      "email-dai-ly.txt (\"chỉ chỉnh vài chỗ nhỏ\")"
+    ],
+    "prompt": [
+      "Tôi là pháp chế của Bên A – bên cung cấp.",
+      "Đại lý gửi lại bản sửa, nói chỉ chỉnh câu chữ (email đính kèm). Hãy:",
+      "1. So bản 05/11 với bản đại lý sửa, liệt kê thay đổi theo từng Điều.",
+      "2. Thay đổi nào có hại cho Bên A, mức rủi ro, căn cứ.",
+      "3. Dự đoán đại lý phản bác thế nào, đề xuất nhượng bộ.",
+      "4. Soạn câu chữ sửa lại và email phản hồi."
+    ],
+    "ket_qua": {
+      "nhan_so": "Thay đổi về nội dung (trên 5 chỗ sửa)",
+      "so": "4 điều khoản",
+      "y": [
+        "Điều 2: \"được\" → \"không được\" bán tại 3 tỉnh",
+        "Điều 5: thanh toán 30 → 60 ngày",
+        "Điều 9: phạt 12% – vượt trần 8% (Đ301 LTM)",
+        "Điều 11: Tòa án → trọng tài tại Cần Thơ"
+      ]
+    },
+    "connector": "Gmail lấy 2 phiên bản trong chuỗi thư → so sánh → Drive lưu bảng so sánh → Gmail tạo nháp trả lời đúng chuỗi → Calendar đặt lịch họp đàm phán.",
+    "nguoi_lam": "đọc lại toàn văn các điều bị sửa, trình Tổng Giám đốc duyệt phương án nhượng bộ, quyết định ký hay không, tự gửi email."
+  }
+}
